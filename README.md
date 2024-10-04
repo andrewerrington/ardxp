@@ -5,7 +5,7 @@ _ardxp.ino_ is an empty template. To use it you will need to figure out the data
 to subscribe to datarefs, send new dataref values to X-Plane, or send commands. Or any combination of the above.
 
 If you run the sketch as-is it will start the Ethernet module, attempt to get an IP address on your network with DHCP, and look for the
-X-Plane PC IP address and port. You will see this happening in the Arduino serial monitor. Then the code enters the classic Arduino _loop()_
+X-Plane PC IP address and port. You will see this happening in the Arduino serial monitor. Then the code enters the classic Arduino `loop()`
 and does nothing. Before doing this you need to attach a Wiznet W5500 module to your Arduino, and change the MAC address in the sketch to
 something unique for your network (and again for any other Arduinos you want to use on your network).
 
