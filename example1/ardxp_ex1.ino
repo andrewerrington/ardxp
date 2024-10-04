@@ -67,8 +67,8 @@ union u_tag {
 // example. You can just hook up a potentiometer and control any other
 // dataref you know about.
 const int zone_1_pot = A3;
-uint16_t pot_value = 0;  // variable to store analog input value
-uint16_t last_pot_value = -100;  // previous analog input value
+int16_t pot_value = 0;  // variable to store analog input value
+int16_t last_pot_value = -100;  // previous analog input value
 
 
 
