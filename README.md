@@ -13,6 +13,21 @@ There are various Ethernet modules you can use. For testing I am using an Arduin
 does not supply sufficient current for the W5500 lite module so I added an external 3.3V regulator. If you are new to Arduino and Ethernet then
 try some of the provided examples in the Arduino IDE to show that your module is connected and working properly.
 
+Tested hardware:
+* W5500 blue board
+* W5500 lite (green board) with additional 3.3V regulator
+* Keyestudio KS0304 Arduino UNO + W5500
+
+Still to do:
+* Arduino UNO W5500 shield
+
+The Keyestudio KS0304 board is an Arduino and W5500 combined on one board. Keyestudio also sells the KS0443, which is an Arduino UNO shield with W5500, which I have not tested. Basically any combination of Arduino and W5500 can be used.
+
+Not recommended:
+* ENC28J60
+
+The ENC28J60 is an alternative Ethernet interface board, and is supported by Arduino libraries. I can send commands using it, however I have been unable to successfully subscribe to datarefs.
+
 There is a full (almost complete) example in my Challenger 300 glare shield project here:
 https://github.com/andrewerrington/challenger_300_glareshield/blob/main/src/glare_shield_interface.ino
 
