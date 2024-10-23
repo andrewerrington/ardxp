@@ -291,6 +291,13 @@ void loop() {
     // Look at the contents of the packet.
     // We're only interested in RREF packets.
     if (strncmp(packetBuffer, "RREF", 4) == 0) {
+      // Packet format is
+      // RREF,iiiiffff
+      // Where iiii is the index we set up when we subscribed
+      // and ffff is the floating point value of the dataref.
+      // X-Plane might pack many values in a single packet:
+      // RREF,iiiiffffiiiiffffiiiiffffiiiiffff...
+            
       // Start at position 5 and unpack the rest
       for (int i = 5; i < packetSize; i += 8) {
         // Unpack the dataref value. It's always a float, so assemble these
